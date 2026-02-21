@@ -5,20 +5,20 @@
 class Heimdall < Formula
   desc "Secure local SSH vault and workflow CLI."
   homepage "https://github.com/amanthanvi/heimdall"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.2/heimdall-darwin-amd64.tar.gz"
-      sha256 "93b84d63e14318a0b1b902c8923237de63d0efa24b8afb2f443814c2041a4e11"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.3/heimdall-darwin-amd64.tar.gz"
+      sha256 "fcba83a1cf7825b159dcc807f8dd762f3604d04234f96419a5963a478ad47fe8"
 
       def install
         bin.install "heimdall"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.2/heimdall-darwin-arm64.tar.gz"
-      sha256 "9f1a6318bad89b090a007ee9dfd6076a7cc01e71184ef93cbd67acb809c03746"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.3/heimdall-darwin-arm64.tar.gz"
+      sha256 "4099af0ac7854ef29ea431a1a5c6031a7ad163059fc983b5391b5a566e6e9e66"
 
       def install
         bin.install "heimdall"
@@ -28,15 +28,15 @@ class Heimdall < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.2/heimdall-linux-amd64.tar.gz"
-      sha256 "b9264b6f3c8b4b40a27ea57fb66f8a64f613c9b2bedb2f07fa13801b13d6d2f0"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.3/heimdall-linux-amd64.tar.gz"
+      sha256 "c35df16b581fb40fb699f027d4382dc255a4ff87a854de948ec7db445d40aeab"
       def install
         bin.install "heimdall"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.2/heimdall-linux-arm64.tar.gz"
-      sha256 "3affea6c2181805377ba555911ccd2dd80762f26957eed6e3a0d219f1b3399b3"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.3/heimdall-linux-arm64.tar.gz"
+      sha256 "2c8714865290cb1f046b4f1263efb34c7fa4d14e62c7e147933fdd91219a53fe"
       def install
         bin.install "heimdall"
       end
