@@ -5,20 +5,20 @@
 class Heimdall < Formula
   desc "Secure local SSH vault and workflow CLI."
   homepage "https://github.com/amanthanvi/heimdall"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.6/heimdall-darwin-amd64.tar.gz"
-      sha256 "986ccb2f174c159ce75517c05a48453e0bc3e875c84a70ed63736241aa55bdd5"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.7/heimdall-darwin-amd64.tar.gz"
+      sha256 "3cf24d5ec04b8e8ad0cb7967921d2ec04e66bc23e7cb432b8d4e9adb88574938"
 
       define_method(:install) do
         bin.install "heimdall"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.6/heimdall-darwin-arm64.tar.gz"
-      sha256 "0c0471c8649b57bc8eaaed4c76b09988dfbccb892074f0127fa7d9ab5d1e5c51"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.7/heimdall-darwin-arm64.tar.gz"
+      sha256 "000a40b92b9a5bef7bdd24aaaa4e641834a48690a6d58ecdff34aa1582f8f6c4"
 
       define_method(:install) do
         bin.install "heimdall"
@@ -28,15 +28,15 @@ class Heimdall < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.6/heimdall-linux-amd64.tar.gz"
-      sha256 "efed389b98c70ba3551d8e912871ce12f98a006f3f8ac5246f7f420db4b5a152"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.7/heimdall-linux-amd64.tar.gz"
+      sha256 "ba8a1c494e46e08e7f88466c60a0be2a779e7cd336edfb049cf262ba036a1ae0"
       define_method(:install) do
         bin.install "heimdall"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.6/heimdall-linux-arm64.tar.gz"
-      sha256 "3feb5fd1cc647a4eca417c7117f5afcd9da69aec156c2e6b1b90040dce7cd14e"
+      url "https://github.com/amanthanvi/heimdall/releases/download/v0.1.7/heimdall-linux-arm64.tar.gz"
+      sha256 "e408fa79ba6f52457900e8fbb503b43fd552df6287fb287d43e74f7e782146f8"
       define_method(:install) do
         bin.install "heimdall"
       end
