@@ -11,6 +11,11 @@ cask "heimdall" do
 
   binary "heimdall"
 
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/heimdall"]
+  end
+
   on_macos do
     on_intel do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-darwin-amd64.tar.gz",
