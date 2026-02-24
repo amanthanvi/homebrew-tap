@@ -3,7 +3,7 @@ cask "heimdall" do
   name "heimdall"
   desc "Secure local SSH vault and workflow CLI."
   homepage "https://github.com/amanthanvi/heimdall"
-  version "0.2.0"
+  version "0.2.1"
 
   livecheck do
     skip "Auto-generated on release."
@@ -15,12 +15,12 @@ cask "heimdall" do
     on_intel do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-darwin-amd64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "640629315c11abf7c61e5895dbd3d51d3e9202bd5b8c905165610a2e1f17655f"
+      sha256 "676f7f45fdd0ade66e11dfd1af610a0d8bed1a593ae26b67904b665cadd1ed03"
     end
     on_arm do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-darwin-arm64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "c79d50f28b7f9277d3cefc871706466c9125544bb6392da7eb50355bb929f5ea"
+      sha256 "0a5eb2119191f3dded3ae4bce6e401a22385bad5c9a9732c7673230cdb6339d8"
     end
   end
 
@@ -28,12 +28,12 @@ cask "heimdall" do
     on_intel do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-linux-amd64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "2060c5dbfe310e5ddfdb73f520f5d69c8934a1d4661180c74988c93cc3a07845"
+      sha256 "886dcaee37470d0ee7f8ae8c0405d7f4e248b052369ffc8f6382cb23c895c2be"
     end
     on_arm do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-linux-arm64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "dc99a34c3839f437f6342863d70e14214ae7a1716771c5ebec51a3f5f7beff92"
+      sha256 "ee1c2e183ff258c8ca52a788ca9880a0c690bcf469cd07fb722f7bea2173564f"
     end
   end
 
