@@ -3,7 +3,7 @@ cask "heimdall" do
   name "heimdall"
   desc "Secure local SSH vault and workflow CLI."
   homepage "https://github.com/amanthanvi/heimdall"
-  version "0.2.1"
+  version "0.3.0"
 
   livecheck do
     skip "Auto-generated on release."
@@ -11,21 +11,16 @@ cask "heimdall" do
 
   binary "heimdall"
 
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{staged_path}/heimdall"]
-  end
-
   on_macos do
     on_intel do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-darwin-amd64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "676f7f45fdd0ade66e11dfd1af610a0d8bed1a593ae26b67904b665cadd1ed03"
+      sha256 "9d67547a9c4f0d895e1551fb1f24bf177042e9a45309365531c6e5beeb03739d"
     end
     on_arm do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-darwin-arm64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "0a5eb2119191f3dded3ae4bce6e401a22385bad5c9a9732c7673230cdb6339d8"
+      sha256 "2e25599908826e731b7fa9cceee29d86dcc0bd1f0c87a7cc513781b01b692d04"
     end
   end
 
@@ -33,12 +28,18 @@ cask "heimdall" do
     on_intel do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-linux-amd64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "886dcaee37470d0ee7f8ae8c0405d7f4e248b052369ffc8f6382cb23c895c2be"
+      sha256 "d544c9aa723a4a305340f9e89ec98ffd7bcb0a5ec2b6572e41d1fb9713852e3c"
     end
     on_arm do
       url "https://github.com/amanthanvi/heimdall/releases/download/v#{version}/heimdall-linux-arm64.tar.gz",
         verified: "github.com/amanthanvi/heimdall/"
-      sha256 "ee1c2e183ff258c8ca52a788ca9880a0c690bcf469cd07fb722f7bea2173564f"
+      sha256 "ccccba295357d5392acd6b8af7e7d63139e1ce2fefd5027123b93fd9c5ce07da"
+    end
+  end
+
+  postflight do
+    if OS.mac?
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/heimdall"]
     end
   end
 
